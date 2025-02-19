@@ -1,0 +1,525 @@
+#root{
+  margin: 0;
+  position: relative;
+  padding-bottom: 500px;
+  --fontSize:14px;
+}
+
+body{
+  display: block;
+  margin: 0;
+  padding-top: 40px;
+  overflow-x: hidden;
+}
+
+.Browser{
+  cursor: pointer;
+}
+
+.browser-div{
+  position: relative;
+  cursor: pointer;
+  transition: visibility 0.6s ease;
+}
+
+.ul{
+  position: absolute;
+  padding: 20px 30px;
+  box-shadow: 2px 2px 1px rgba(0,0,0,0.5);
+  background-color:#dcdcdc;
+  margin: 0;
+  list-style: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s ease;
+}
+
+.Romance:hover,.actions:hover,.sci-fi:hover,.fantacy:hover,.Ambitions:hover,.Knowledge:hover{
+  text-decoration: underline;
+}
+
+.Browser-div:hover{
+  text-decoration: underline;
+}
+
+
+.Browser-div:hover .ul{
+  visibility: visible;
+  opacity: 1;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  height: 60px;
+  width: 100%;
+  background-color: #dcdcdc;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+
+nav .section1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 40px;
+  flex: 1;
+}
+
+.Header{
+  flex: 1;
+  margin-left: 20px;
+}
+
+.Books{
+  font-size: 40px;
+  font-weight: bold;
+  font-family:"Open Sans", serif ;
+}
+
+main{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  width: 1000px;
+  
+}
+
+
+article {
+ width: 270px;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ gap: 10px;
+ box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.5);
+ height: 450px;
+ scale: 0.9;
+ background-color: #e5e7e9 ;
+ transition: 0.3s;
+ cursor: pointer;
+}
+
+article:hover{
+  scale: 1;
+}
+
+
+.books{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  padding: 70px 30px;
+  column-gap: 20px;
+  row-gap: 20px;
+  place-self: center;
+  margin-left: 450px;
+}
+
+@media only screen and (min-width: 264px) and (max-width:650px) {
+  .books {
+    display: grid; /* Ensure display is set to grid */
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Corrected minMax → minmax */
+    gap: 10px; /* Optional: Adds spacing between grid items */
+    margin-left: 0;
+    margin-right: 40px;
+  }
+  .Quotes{
+    visibility: hidden;
+  }
+}
+
+.books-MyBooks{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  padding: 70px 30px;
+  column-gap: 20px;
+  row-gap: 20px;
+  place-self: center;
+  margin-left: 280px;
+}
+
+
+.thumbnail{
+  width: 80px;
+}
+
+.Quotes{
+  width: 300px;
+}
+
+.SaveBooks{
+  padding: 10px 20px;
+  background-color: rgb(102, 232, 102);
+  color: black;
+  border-radius: 7px;
+  border: none;
+  /* box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5); */
+  cursor: pointer;
+}
+
+.site-footer{
+  height: 420px;
+  width: 100%;
+  background-color: #0d121b;
+  font-size: 12px;
+  color: #fff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+
+}
+
+
+
+.server-footer{
+ margin-left: 30px;
+ font-size: var(--fontSize);
+}
+
+.github-footer{
+  margin-right: 30px;
+  font-size: var(--fontSize);
+}
+
+
+.server-footer,.github-footer{
+  flex: 1;
+  flex-shrink: 0;
+}
+
+
+.Homenavlink{
+  text-decoration: none;
+}
+
+.Homenavlink:hover{
+  background-color: rgb(196, 192, 192);
+}
+
+.home{
+  text-decoration:none;
+  color: #0d121b;
+}
+
+.SignupPage{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  top: 40%;
+  height: 800px;
+}
+
+.Signup-div{
+height: 350px;
+padding: 25px 30px;
+box-shadow: -8px 8px 5px rgba(0,0,0,0.5),8px -8px 5px rgba(0,0,0,0.5);
+}
+
+.Signup{
+height: 250px;
+display: grid;
+grid-template-columns: repeat(1,1fr);
+column-gap: 10px;
+}
+
+.Username,.Email,.Password{
+ padding: 12px 9px;
+ border-radius: 5px;
+ width: 280px;
+}
+
+.Signup-WholeDivPage{
+  height: 100%;
+  width: 100%;
+  padding-bottom: 300px;
+}
+
+.Signupnavlink{
+  text-decoration: none;
+}
+
+.Signup-redirect{
+  /* color: #0d121b; */
+  border: none;
+  padding: 1px 2px;
+}
+
+.Signin-button{
+ width: 60px;
+ padding-left: 10px;
+ padding-right: 10px;
+ padding-top: 10px;
+ padding-bottom: 10px;
+ margin-top: 10px;
+ margin-left: 120px;
+ color:#fff;
+ background-color: rgba(26, 26, 190, 0.972);
+ border-radius: 10px;
+ border: none;
+}
+
+.createnewaccount{
+  width: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  margin-top: 10px;
+  margin-left: 100px;
+  color:#fff;
+  background-color: rgba(26, 26, 190, 0.972);
+  border-radius: 10px;
+  border: none;
+}
+
+.login{
+  width: 60px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  margin-left: 120px;
+  color:#fff;
+  background-color: rgba(26, 26, 190, 0.972);
+  border-radius: 10px;
+  border: none;
+}
+
+.myBooks{
+ text-decoration: none;
+}
+
+.myBooks:hover{
+  background-color: rgb(196, 192, 192);
+}
+
+/* .Books{
+  color: #0d121b;
+  cursor: pointer;
+} */
+
+nav div h3:nth-child(2) {
+  color: #0d121b;
+  cursor: pointer;
+}
+
+.mybooks{
+  color: #0d121b;
+}
+
+.Loading{
+  color: #0d121b;
+  font-size: medium;
+  position: relative;
+  top: 50%;
+  left: 50%;
+}
+
+
+.thumbnail-div{
+  width: 80px;
+  height: 126.77px;
+}
+
+
+.book-title{
+height: 130px;
+}
+
+.book-author{
+height: 50px;
+}
+
+.title{
+  margin-left: 5px;
+}
+
+.author{
+  margin-left: 5px;
+}
+
+.mybooks-div{
+  margin-right: 16vw;
+  padding-bottom: 0px;
+}
+
+.Quotes{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  right: 0%;
+  gap: 50px;
+}
+
+.div1 {
+  margin-top: 200px;
+  width: 250px;
+  max-width: 1000px; /* Set a specific max-width as needed */
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.bookpublish {
+  display: inline-block;
+}
+
+.book_map_quotes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.book_map_quotes pre {
+  white-space: pre-wrap; /* Allows text wrapping */
+  width: 100%;
+  word-wrap: break-word; /* Ensures long words break */
+  text-align: left;
+}
+
+.book_map_quotes h3 {
+  font-size: 30px;
+}
+
+.book_map_quotes h4 {
+  font-size: 25px;
+}
+
+.book_map_quotes pre {
+  font-size: 20px;
+}
+
+.book_map_quotes {
+  border:  2px solid black;
+  padding: 20px 30px;
+}
+
+article{
+  position: relative;
+}
+
+.crossMark {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+}
+
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.search-input {
+  flex: 1;  /* Allows shrinking */
+  min-width: 150px;
+  max-width: 400px;
+  width: 100%;
+  height: auto;  /* Remove fixed height */
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+@media (max-width: 500px) {
+  .search-input {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 350px) {
+  .search-input {
+    max-width: 200px;
+  }
+}
+
+
+.search-index-columns {
+  position: absolute;
+  top: 66%;
+  width: 100%;
+  z-index: 999;
+  height: 400px;
+  min-height: 200px;
+  overflow-y: auto; /* Smooth scrolling */
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  display: none;
+}
+
+.search-index-columns.visible {
+  display: block; /* Show when results exist */
+}
+
+.search-index-columns.hidden {
+  display: none;
+}
+
+ a{
+  text-decoration: none;
+  color: black;
+}
+
+.searchbar-options {
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.searchbar-options img {
+  width: 50px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.searchbar-options p {
+  margin: 0;
+}
+
+.searchbar-options:hover {
+  background-color: #ececec;
+  cursor: pointer;
+}
+
+#text {
+  width: 240px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+#text:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
